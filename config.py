@@ -378,7 +378,7 @@ def init_widgets_list():
                        background = colors[8],
                        font = "Source Code Pro Black",
                        fontsize = "16",
-                       configured_keyboards = ['us', 'ir'],
+                       configured_keyboards = ['us'],
                        fmt = ' {}',
                        padding = 5
                        ),
