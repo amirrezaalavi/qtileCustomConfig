@@ -24,6 +24,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+###
+#Edited by AmirAloi 
+#Contact me here: alavi2004@outlook.com
+###
 
 import os
 import re
@@ -34,7 +38,7 @@ from libqtile import layout, bar, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen, Rule
 from libqtile.command import lazy
 from libqtile.widget import Spacer
-#import arcobattery
+
 
 #mod4 or mod = super key
 mod = "mod4"
@@ -255,7 +259,7 @@ widget_defaults = init_widgets_defaults()
 def init_widgets_list():
     widgets_list = [
 #             widget.Sep(
-#                      linewidth = 0,
+#                      linewidth = 2,
 #                      padding = 2,
 #                      foreground = colors[0],
 #                      background = colors[0]
@@ -308,14 +312,6 @@ def init_widgets_list():
                        background = colors[3],
                        padding = 5
                        ),
-#            widget.TextBox(
-#                      text = '|',
-#                      font = "SauceCodePro NF",
-#                      background = colors[0],
-#                      foreground = '474747',
-#                      padding = 2,
-#                      fontsize = 20
-#                      ),
               widget.WindowName(
                        font = "Source Sans Pro Black",
                        fontsize = 15,
@@ -323,25 +319,6 @@ def init_widgets_list():
                        background = None,
                        padding = 2
                        ),
-              
-              
-              
-              
-              
-#             widget.Sep(
-#                      linewidth = 0,
-#                      padding = 6,
-#                      foreground = colors[0],
-#                      background = colors[0]
-#                      ),
-#             widget.TextBox(
-#                      text = '',
-#                      font = "SauceCodePro NF",
-#                      background = colors[0],
-#                      foreground = colors[3],
-#                      padding = 0,
-#                      fontsize = 42
-#                      ),
              widget.Net(
                        interface = "wlp3s0",
                        font = "Source Code Pro Black",
@@ -351,29 +328,13 @@ def init_widgets_list():
                        background = colors[3],
                        padding = 2
                        ),
-#             widget.TextBox(
-#                      text = '',
-#                      font = "SauceCodePro NF",
-#                      background = colors[3],
-#                      foreground = colors[4],
-#                      padding = 0,
-#                      fontsize = 42
-#                      ),
-              #widget.ThermalSensor(
-              #         foreground = colors[1],
-              #         background = colors[4],
-              #         threshold = 90,
-              #         fmt = 'Temp: {}',
-              #         padding = 5
-              #         ),
-#              widget.TextBox(
-#                       text='',
-#                       font = "SauceCodePro NF",
+#              widget.ThermalSensor(
+#                       foreground = colors[1],
 #                       background = colors[4],
-##                       foreground = colors[5],
-#                       padding = 0,
-#                       fontsize = 42
-#R                       ),
+#                       threshold = 90,
+#                       fmt = 'Temp: {}',
+#                       padding = 5
+#                       ),
 #              widget.CheckUpdates(
 #                       update_interval = 1800,
 #                       distro = "Arch_checkupdates",
@@ -385,14 +346,6 @@ def init_widgets_list():
 #                       padding = 5,
 #                       background = colors[5]
 #                       ),
-#              widget.TextBox(
-#                       text = '',
-#                       font = "SauceCodePro NF",
-#                       background = colors[5],
-#                       foreground = colors[6],
-#                       padding = 0,
-#                       fontsize = 42
-#                       ),
               widget.Memory(
                        foreground = colors[1],
                        background = colors[6],
@@ -402,14 +355,6 @@ def init_widgets_list():
                        format = '{MemUsed: .0f}{mm}',
                        padding = 5
                        ),
-#             widget.TextBox(
-#                      text = '',
-#                      font = "SauceCodePro NF",
-#                      background = colors[6],
-#                      foreground = colors[7],
-#                      padding = 0,
-#                      fontsize = 42
-#                      ),
               widget.Volume(
                        foreground = colors[1],
                        background = colors[7],
@@ -418,14 +363,6 @@ def init_widgets_list():
                        fmt = '蓼: {}',
                        padding = 2
                        ),
-#             arcobattery.BatteryIcon(
-#                       padding=1,
-#                       scale=0.7,
-#                       y_poss=2,
-#                       theme_path=home + "/.config/qtile/icons/battery_icons_horiz",
-#                       update_interval = 5,
-#                       background = colors[1]
-#                       ),
               widget.Battery(
                         font = "SauceCodePro Nerd Font",
                         update_interval = 1,
@@ -436,14 +373,6 @@ def init_widgets_list():
                         format = '{char} {percent:2.0%}',
                         full_char = ''
                         ),
-#             widget.TextBox(
-#                      text = '',
-#                      font = "SauceCodePro NF",
-#                      background = colors[7],
-#                      foreground = colors[8],
-#                      padding = 0,
-#                      fontsize = 42
-#                      ),
               widget.KeyboardLayout(
                        foreground = colors[1],
                        background = colors[8],
@@ -453,14 +382,6 @@ def init_widgets_list():
                        fmt = ' {}',
                        padding = 5
                        ),
-#             widget.TextBox(
-#                      text = '',
-#                      font = "SauceCodePro NF",
-#                      background = colors[8],
-#                      foreground = colors[9],
-#                      padding = 0,
-#                      fontsize = 42
-#                      ),
               widget.Clock(
                        foreground = colors[1],
                        background = colors[9],
@@ -591,9 +512,9 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class='ssh-askpass'),  # ssh-askpass
     Match(title='branchdialog'),  # gitk
     Match(title='pinentry'),  # GPG key password entry
-    Match(wm_class='Arcolinux-welcome-app.py'),
-    Match(wm_class='Arcolinux-tweak-tool.py'),
-    Match(wm_class='Arcolinux-calamares-tool.py'),
+#    Match(wm_class='Arcolinux-welcome-app.py'),
+#    Match(wm_class='Arcolinux-tweak-tool.py'),
+#    Match(wm_class='Arcolinux-calamares-tool.py'),
     Match(wm_class='confirm'),
     Match(wm_class='dialog'),
     Match(wm_class='download'),
