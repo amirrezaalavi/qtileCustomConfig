@@ -15,6 +15,6 @@ If there was any line in codes which you didn't need just comment it, but if qti
 
 
 Keyboard shortcuts are defined inside <code>sxhkd/sxhkdrc</code>
-The default Terminal emulator is <strong>Alacritty</strong> and default browser is <strong>Firefox</strong> but you cand also change it in <code>sxhkd/sxhkdrc</code>
+The default Terminal emulator is <strong>Alacritty</strong> and default browser is <strong>Firefox</strong>, also you need <code>light</code> program if you need to change your display brightness, but you can also change it in <code>sxhkd/sxhkdrc</code>
 
 You should have <code> Ubuntu </code> and <code> SauceCodePro Nerd Font</code> <a href="https://www.nerdfonts.com/">(found here)</a> and <code>Source Code Pro</code> fonts on your device but again you can change it on <code>config.py</code>
