@@ -1,5 +1,5 @@
 # qtileCustomConfig
-Customized config for Qtile based on Arco Linux defaults
+Customized configiuration for Qtile based on Arco Linux defaults
 
 
 <strong>Note: Since these files where written for Arco Linux, if you want to use it on other OSes please check the config files for any program that you don't have.</strong>
